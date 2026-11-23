@@ -1,0 +1,15 @@
+# Data mentah (file besar, jangan di-commit)
+data/raw/
+
+# Buku petunjuk dosen (bukan bagian repo)
+Buku_Petunjuk_Proyek_TTKI_PENS_Semester5_2026.pdf
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
+
+# Kredensial (jangan pernah di-commit)
+kaggle.json
+.env

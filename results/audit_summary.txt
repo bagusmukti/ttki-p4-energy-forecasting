@@ -1,0 +1,39 @@
+== 1. Ukuran & rentang waktu ==
+Baris: 2,075,259 | Kolom: ['Global_active_power', 'Global_reactive_power', 'Voltage', 'Global_intensity', 'Sub_metering_1', 'Sub_metering_2', 'Sub_metering_3']
+Rentang: 2006-12-16 17:24:00 s.d. 2010-11-26 21:02:00
+
+== 2. Missing values ==
+                       missing  persen
+Global_active_power      25979   1.252
+Global_reactive_power    25979   1.252
+Voltage                  25979   1.252
+Global_intensity         25979   1.252
+Sub_metering_1           25979   1.252
+Sub_metering_2           25979   1.252
+Sub_metering_3           25979   1.252
+
+== 3. Timestamp ==
+Timestamp duplikat: 0
+Menit seharusnya: 2,075,259 | ada di file: 2,075,259 | baris tidak ada: 0
+
+== 4. Run missing Global_active_power ==
+Jumlah run: 71 | terpanjang: 7,226 menit (120.4 jam)
+Run >= 1 jam: 9 | >= 1 hari: 6
+
+== 5. Statistik ringkas ==
+                           min     mean      max
+Global_active_power      0.076    1.092   11.122
+Global_reactive_power    0.000    0.124    1.390
+Voltage                223.200  240.840  254.150
+Global_intensity         0.200    4.628   48.400
+Sub_metering_1           0.000    1.122   88.000
+Sub_metering_2           0.000    1.299   80.000
+Sub_metering_3           0.000    6.458   31.000
+Global_active_power < 0: 0
+
+== 6. Kelengkapan harian ==
+Jumlah hari: 1,442 | lengkap 1440 menit: 1,358
+Hari dengan >0 menit missing: 84
+Hari dengan >10% menit missing: 24
+Hari tanpa data sama sekali: 9
+Hari NaN setelah kebijakan: 24
