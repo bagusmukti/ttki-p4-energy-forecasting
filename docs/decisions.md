@@ -11,8 +11,8 @@
 | Dataset | Individual Household Electric Power Consumption |
 | Sumber di Kaggle | https://www.kaggle.com/datasets/uciml/electric-power-consumption-data-set |
 | Asal data primer | UCI Machine Learning Repository (Hébrail & Bérard) |
-| Tanggal unduh | [ISI: tanggal kamu mengunduh] |
-| Lisensi | [ISI: salin dari halaman Kaggle/UCI] |
+| Tanggal unduh | 12 November 2026 |
+| Lisensi | Kaggle: "Database: Open Database, Contents: Database Contents" (Open Database License / ODbL untuk basis data, Database Contents License / DbCL v1.0 untuk isinya) |
 | Berkas | `household_power_consumption.txt` (pemisah `;`, missing ditulis `?`) |
 
 Hasil audit lengkap: `results/audit_summary.txt`.
