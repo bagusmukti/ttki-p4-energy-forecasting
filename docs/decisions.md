@@ -89,10 +89,13 @@ Model yang sama dipakai di semua skenario; hanya fitur yang berubah.
 - Hari NaN lebih banyak di periode test (4,85%) dibanding train (0,54%) dan validation (1,10%). Karena fitur lag 7 hari dan rolling 14 hari ikut kosong setelah hari NaN, jumlah hari test yang benar-benar dievaluasi akan lebih sedikit; angka pastinya dilaporkan setelah eksperimen.
 - Hari yang missing lebih dari 10% dikeluarkan dari evaluasi, sehingga hasil hanya berlaku untuk hari dengan data cukup lengkap.
 
-## 9. Belum diputuskan
+## 9. Keputusan tambahan (dibuat 2026-11-24, sebelum evaluasi test)
 
-- Pilihan model (misalnya Ridge / Random Forest) dan seed.
-- Jadwal walk-forward (frekuensi pelatihan ulang di periode test).
+- Model: Ridge Regression (dengan StandardScaler yang di-fit hanya pada train) dan Random Forest (300 pohon). Model yang sama dipakai di semua skenario.
+- Tuning hyperparameter hanya di validation. Grid Ridge: alpha {0,01; 0,1; 1; 10; 100}. Grid Random Forest: max_depth {5, 10, tanpa batas} × min_samples_leaf {1, 5}.
+- Evaluasi test: walk-forward dengan expanding window, model dilatih ulang tiap bulan memakai seluruh data sebelum bulan itu, hyperparameter tetap dari validation. Test dihitung sekali dan tidak dipakai untuk memilih model.
+- Pembanding H2: random split 80:20 dengan 5 seed (42–46) pada hari-hari evaluasi bersama. Ini bukan evaluasi utama.
+- Seed: 42. Konfigurasi yang digambar di plot dipilih menurut MAE validation, bukan test.
 
 ## 10. Log perubahan
 
@@ -100,3 +103,5 @@ Model yang sama dipakai di semua skenario; hanya fitur yang berubah.
 |---|---|---|
 | 2026-11-24 | Dokumen dibuat | Keputusan awal setelah audit data |
 | 2026-11-24 | Status dikunci; tabel sebaran NaN dan keputusan split diisi | Hasil `src/check_nan_days.py` menunjukkan tidak ada split yang bolong parah |
+| 2026-11-24 | Bagian 9 ditambahkan (model, tuning, walk-forward, random split, seed) | Ditetapkan sebelum `src/run_experiments.py` dijalankan, supaya test dihitung sekali dengan rancangan yang sudah dibekukan |
+| 2026-11-24 | `src/run_experiments.py` dijalankan satu kali; tidak ada keputusan di atas yang diubah setelah melihat hasil | Menjaga aturan bahwa test tidak dipakai untuk memilih atau mengubah model |

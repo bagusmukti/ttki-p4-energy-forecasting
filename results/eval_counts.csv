@@ -1,0 +1,4 @@
+split,n_days,y_nan,lost_due_to_features,n_evaluated,pct_evaluated
+train,747,4,28,715,95.7
+validation,365,4,28,333,91.2
+test,330,16,56,258,78.2

@@ -1,0 +1,50 @@
+{
+  "dijalankan": "2026-11-24T11:58:45",
+  "python": "3.14.0",
+  "pandas": "3.1.1",
+  "numpy": "2.5.5",
+  "scikit-learn": "1.9.1",
+  "seed": 42,
+  "n_random_seeds": 5,
+  "splits": {
+    "train": [
+      "2006-12-16",
+      "2008-12-31"
+    ],
+    "validation": [
+      "2009-01-01",
+      "2009-12-31"
+    ],
+    "test": [
+      "2010-01-01",
+      "2010-11-26"
+    ]
+  },
+  "best_params": {
+    "A|Ridge": {
+      "alpha": 100
+    },
+    "A|RandomForest": {
+      "max_depth": 10,
+      "min_samples_leaf": 5
+    },
+    "B|Ridge": {
+      "alpha": 100
+    },
+    "B|RandomForest": {
+      "max_depth": 10,
+      "min_samples_leaf": 1
+    },
+    "C|Ridge": {
+      "alpha": 100
+    },
+    "C|RandomForest": {
+      "max_depth": 5,
+      "min_samples_leaf": 5
+    }
+  },
+  "best_validation_config": [
+    "C",
+    "Ridge"
+  ]
+}
